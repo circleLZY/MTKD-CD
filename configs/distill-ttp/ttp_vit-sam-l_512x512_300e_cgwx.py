@@ -3,7 +3,7 @@ _base_ = [
     '../common/standard_512x512_300e_cgwx.py']
 
 dataset_type = 'LEVIR_CD_Dataset'
-data_root = '/nas/datasets/lzy/RS-ChangeDetection/CGWX-Augment'
+data_root = '/nas/datasets/lzy/RS-ChangeDetection/CGWX'
 
 crop_size = (512, 512)
 
