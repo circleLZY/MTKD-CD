@@ -9,7 +9,7 @@ Official implementation for the paper **[JL1-CD: A New Benchmark for Remote Sens
 ## Dataset
 The JL1-CD dataset is now publicly available. You can download the checkpoint files from:
 
-- [Google Drive](<insert link here>)
+- [Google Drive](https://drive.google.com/drive/folders/1ELoqx7J3GrEFMX5_rRynMjW9-Poxz3Uu?usp=sharing)
 - [Baidu Disk](https://pan.baidu.com/s/1_vcO4c5DM5LDuOqLwLrWJg?pwd=5byn)
 
 ## Usage
