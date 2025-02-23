@@ -73,5 +73,5 @@ Testing the O-P strategy is more complex. You can refer to the script located at
 
 ### Additional Information
 
-You can download checkpoint files from Baidu Disk: [Download Link](https://pan.baidu.com/s/1_vcO4c5DM5LDuOqLwLrWJg?pwd=5byn).
+You can download checkpoint files from Baidu Disk: [Download Link](https://pan.baidu.com/s/1F5MIGCCiNHFifNl_kDiklA?pwd=4tid).
 
