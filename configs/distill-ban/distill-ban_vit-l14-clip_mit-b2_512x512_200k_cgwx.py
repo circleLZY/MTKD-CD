@@ -1,9 +1,9 @@
 _base_ = ['./distill-ban_vit-l14-clip_mit-b0_512x512_200k_cgwx.py']
 
-checkpoint_student = '/nas/datasets/lzy/RS-ChangeDetection/checkpoints_distill/BAN/vit-l14-clip-mit-b2/initial/best_mIoU_iter_17000.pth'
-checkpoint_teacher_l = '/nas/datasets/lzy/RS-ChangeDetection/checkpoints_distill/BAN/vit-l14-clip-mit-b2/large/best_mIoU_iter_24000.pth'
-checkpoint_teacher_m = '/nas/datasets/lzy/RS-ChangeDetection/checkpoints_distill/BAN/vit-l14-clip-mit-b2/medium/best_mIoU_iter_10000.pth'
-checkpoint_teacher_s = '/nas/datasets/lzy/RS-ChangeDetection/checkpoints_distill/BAN/vit-l14-clip-mit-b2/small/best_mIoU_iter_35000.pth'
+checkpoint_student = None
+checkpoint_teacher_l = None
+checkpoint_teacher_m = None
+checkpoint_teacher_s = None
 
 # model settings
 model = dict(

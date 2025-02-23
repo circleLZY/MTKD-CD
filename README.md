@@ -1,8 +1,77 @@
-# Repository Overview  
 
-This repository is built upon the OpenCD toolbox.  
+# Repository Overview
 
-- **JL1-CD Dataset**: Coming soon!  
-- **Ongoing Updates**: Continuous improvements and enhancements are in progress.  
+Official implementation for the paper **[JL1-CD: A New Benchmark for Remote Sensing Change Detection and a Robust Multi-Teacher Knowledge Distillation Framework](https://arxiv.org/pdf/2502.13407)**. This code is built upon the [OpenCD toolbox](https://github.com/likyoo/open-cd).
 
-Stay tuned for the latest updates!  
+## News
+- **2/23/2024** - JL1-CD dataset has been open-sourced.
+
+## Dataset
+The JL1-CD dataset is now publicly available. You can download the checkpoint files from:
+
+- [Google Drive](<insert link here>)
+- [Baidu Disk](https://pan.baidu.com/s/1_vcO4c5DM5LDuOqLwLrWJg?pwd=5byn)
+
+## Usage
+
+### Install
+
+To set up the environment, follow the installation instructions provided in the [OpenCD repository](https://github.com/likyoo/open-cd).
+
+### Training
+
+The training process for the MTKD framework consists of three steps. Below, we use the **Changer-MiT-b0** model as an example:
+
+#### Step 1: Train the original model
+
+Run the following command to train the original model:
+
+```bash
+python tools/train.py configs/changer/changer_ex_mit-b0_512x512_200k_cgwx.py --work-dir /path/to/save/models/Changer-mit-b0/original
+```
+
+#### Step 2: Train teacher models for different CAR partitions (e.g., 3 partitions)
+
+Train the teacher models for small, medium, and large CAR partitions as follows:
+
+```bash
+python tools/train.py configs/distill-changer/changer_ex_mit-b0_512x512_200k_cgwx-small.py --work-dir /path/to/save/models/Changer-mit-b0/small
+
+python tools/train.py configs/distill-changer/changer_ex_mit-b0_512x512_200k_cgwx-medium.py --work-dir /path/to/save/models/Changer-mit-b0/medium
+
+python tools/train.py configs/distill-changer/changer_ex_mit-b0_512x512_200k_cgwx-large.py --work-dir /path/to/save/models/Changer-mit-b0/large
+```
+
+In the above two steps, you will have four model versions for **Changer-MiT-b0**: the original model and three teacher models (small, medium, and large). At this point, the O-P strategy can already be applied.
+
+#### Step 3: Train the student model
+
+Initialize the checkpoint paths in `configs/distill-changer/distill-changer_ex_mit-b0_512x512_200k_cgwx.py` for the student model and teacher models as follows:
+
+- `checkpoint_student`
+- `checkpoint_teacher_l`
+- `checkpoint_teacher_m`
+- `checkpoint_teacher_s`
+
+Then, run the following command to train the student model:
+
+```bash
+python tools/train.py configs/distill-changer/distill-changer_ex_mit-b0_512x512_200k_cgwx.py --work-dir /path/to/save/models/Changer-mit-b0/distill
+```
+
+After this step, you will have the student model trained within the MTKD framework.
+
+### Testing
+
+Testing the student model trained with MTKD is simple. Run the following command:
+
+```bash
+python test.py <config-file> <checkpoint>
+```
+
+Testing the O-P strategy is more complex. You can refer to the script located at `tools/test_pipline/single-partition-3-test.py` for more details.
+
+### Additional Information
+
+You can download checkpoint files from Baidu Disk: [Download Link](https://pan.baidu.com/s/1_vcO4c5DM5LDuOqLwLrWJg?pwd=5byn).
+

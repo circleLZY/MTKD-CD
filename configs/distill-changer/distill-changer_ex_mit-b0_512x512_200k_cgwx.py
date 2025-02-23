@@ -9,10 +9,10 @@ crop_size = (512, 512)
 
 
 # checkpoint_student = 'https://download.openmmlab.com/mmsegmentation/v0.5/pretrain/segformer/mit_b0_20220624-7e0fe6dd.pth'  # noqa
-checkpoint_student = '/nas/datasets/lzy/RS-ChangeDetection/checkpoints/Changer/mit-b0/best_mIoU_iter_55000.pth'
-checkpoint_teacher_l = '/nas/datasets/lzy/RS-ChangeDetection/checkpoints_distill/Changer-mit-b0/teacher_ckpt/large/best_mIoU_iter_40000.pth'
-checkpoint_teacher_m = '/nas/datasets/lzy/RS-ChangeDetection/checkpoints_distill/Changer-mit-b0/teacher_ckpt/medium/best_mIoU_iter_97500.pth'
-checkpoint_teacher_s = '/nas/datasets/lzy/RS-ChangeDetection/checkpoints_distill/Changer-mit-b0/teacher_ckpt/small/best_mIoU_iter_67500.pth'
+checkpoint_student = None
+checkpoint_teacher_l = None
+checkpoint_teacher_m = None
+checkpoint_teacher_s = None
 
 model = dict(
     # student

@@ -7,10 +7,10 @@ data_root = '/nas/datasets/lzy/RS-ChangeDetection/CGWX'
 
 crop_size = (512, 512)
 
-checkpoint_student = '/nas/datasets/lzy/RS-ChangeDetection/checkpoints_distill/HANet/teacher_ckpt/initial/best_mIoU_iter_195000.pth'
-checkpoint_teacher_l = '/nas/datasets/lzy/RS-ChangeDetection/checkpoints_distill/HANet/teacher_ckpt/large/best_mIoU_iter_122000.pth'
-checkpoint_teacher_m = '/nas/datasets/lzy/RS-ChangeDetection/checkpoints_distill/HANet/teacher_ckpt/medium/best_mIoU_iter_74000.pth'
-checkpoint_teacher_s = '/nas/datasets/lzy/RS-ChangeDetection/checkpoints_distill/HANet/teacher_ckpt/small/best_mIoU_iter_158000.pth'
+checkpoint_student = None
+checkpoint_teacher_l = None
+checkpoint_teacher_m = None
+checkpoint_teacher_s = None
 
 model = dict(
     # student

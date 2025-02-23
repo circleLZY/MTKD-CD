@@ -7,10 +7,10 @@ data_root = '/nas/datasets/lzy/RS-ChangeDetection/CGWX'
 
 crop_size = (512, 512)
 
-checkpoint_student = 'vscode-remote://ssh-remote%2B101.6.68.41/nas/datasets/lzy/RS-ChangeDetection/checkpoints/CGNet/CGNet/best_mIoU_iter_155000.pth'
-checkpoint_teacher_l = '/nas/datasets/lzy/RS-ChangeDetection/Best_ckpt_3/CGNet/large/best_mIoU_iter_77500.pth'
-checkpoint_teacher_m = '/nas/datasets/lzy/RS-ChangeDetection/Best_ckpt_3/CGNet/medium/best_mIoU_iter_9000.pth'
-checkpoint_teacher_s = '/nas/datasets/lzy/RS-ChangeDetection/Best_ckpt_3/CGNet/small/best_mIoU_iter_79000.pth'
+checkpoint_student = None
+checkpoint_teacher_l = None
+checkpoint_teacher_m = None
+checkpoint_teacher_s = None
 
 model = dict(
     # student
