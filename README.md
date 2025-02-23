@@ -27,7 +27,7 @@ The training process for the MTKD framework consists of three steps. Below, we u
 Run the following command to train the original model:
 
 ```bash
-python tools/train.py configs/changer/changer_ex_mit-b0_512x512_200k_cgwx.py --work-dir /path/to/save/models/Changer-mit-b0/original
+python tools/train.py configs/changer/changer_ex_mit-b0_512x512_200k_cgwx.py --work-dir /path/to/save/models/Changer-mit-b0/initial
 ```
 
 #### Step 2: Train teacher models for different CAR partitions (e.g., 3 partitions)
