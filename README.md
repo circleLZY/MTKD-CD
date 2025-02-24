@@ -78,7 +78,7 @@ You can download checkpoint files from Baidu Disk: [Download Link](https://pan.b
 
 ## Citation
 
-If you find our work useful in your research, please consider citing our paper:
+If you find the JL1-CD dataset or our work useful in your research, please consider citing our paper:
 
 ```bibtex
 @article{liu2025jl1,
