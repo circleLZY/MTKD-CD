@@ -71,7 +71,20 @@ python test.py <config-file> <checkpoint>
 
 Testing the O-P strategy is more complex. You can refer to the script located at `tools/test_pipline/single-partition-3-test.py` for more details.
 
-### Additional Information
+#### Checkpoints
 
 You can download checkpoint files from Baidu Disk: [Download Link](https://pan.baidu.com/s/1F5MIGCCiNHFifNl_kDiklA?pwd=4tid).
 
+
+## Citation
+
+If you find our work useful in your research, please consider citing our paper:
+
+```bibtex
+@article{liu2025jl1,
+  title={JL1-CD: A New Benchmark for Remote Sensing Change Detection and a Robust Multi-Teacher Knowledge Distillation Framework},
+  author={Liu, Ziyuan and Zhu, Ruifei and Gao, Long and Zhou, Yuanxiu and Ma, Jingyu and Gu, Yuantao},
+  journal={arXiv preprint arXiv:2502.13407},
+  year={2025}
+}
+```
