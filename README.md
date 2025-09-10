@@ -4,7 +4,7 @@
 Official implementation for the paper **[JL1-CD: A New Benchmark for Remote Sensing Change Detection and a Robust Multi-Teacher Knowledge Distillation Framework](https://arxiv.org/pdf/2502.13407)**. This code is built upon the [OpenCD toolbox](https://github.com/likyoo/open-cd).
 
 ## News
-- **2/23/2024** - JL1-CD dataset has been open-sourced.
+- **2/23/2025** - JL1-CD dataset has been open-sourced.
 
 ## Dataset
 The JL1-CD dataset is now publicly available. You can download the dataset from:
